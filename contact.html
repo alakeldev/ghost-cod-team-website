@@ -14,7 +14,7 @@
     <!-- Add Favicon -->
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <!-- Website title -->
-    <title>Ghost Team</title>
+    <title>Ghost Team | Contact</title>
 </head>
 
 <body>
@@ -30,13 +30,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="missions.html">Missions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!--End header-->
     <!--Start Contact Content Section-->
+    <main>
     <section class="contact-content">
         <!-- Main page title -->
         <h2 class="contact-title">Contact us</h2>
@@ -46,13 +47,13 @@
             <!-- redirect the form to thankyou.html page after filled out the required inputs and pushed on submit button -->
             <form action="thankyou.html">
                 <!-- Input with type text for person name and it's required -->
-                <input class="cont-input" type="text" name="name" placeholder="*Your Name" required>
+                <input class="cont-input" type="text" name="name" placeholder="*Your Name" aria-label="Your Name" required>
                 <!-- Input with type email for person email and it's required -->
-                <input class="cont-input" type="email" name="mail" placeholder="*Your Email" required>
-                <!-- Input with type text for person phone and it's NOT required -->
-                <input class="cont-input" type="text" name="mobile-number" placeholder="Your Mobile">
+                <input class="cont-input" type="email" name="mail" placeholder="*Your Email" aria-label="Your Email" required>
+                <!-- Input with type tel for person phone and it's NOT required -->
+                <input class="cont-input" type="tel" name="mobile-number" placeholder="Your Mobile" aria-label="Your Mobile Number">
                 <!-- Textarea fot person message that wants to write to our team like he/she wants join or question -->
-                <textarea class="cont-input" name="message" placeholder="*Enter Your Message" required></textarea>
+                <textarea class="cont-input" name="message" placeholder="*Enter Your Message" aria-label="Your Message" required></textarea>
                 <!-- input with type submit to submit the form after fill the required fields -->
                 <input type="submit" value="send message">
             </form>
@@ -69,6 +70,7 @@
         </div>
     </section>
     <!--End Contact Content Section-->
+    </main>
     <!-- Start Footer-->
     <footer>
         <!--Div container inside footer tag "that will contain all footer elements"-->

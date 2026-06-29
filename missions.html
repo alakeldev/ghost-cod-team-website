@@ -14,7 +14,7 @@
     <!-- Add Favicon -->
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <!-- Website title -->
-    <title>Ghost Team</title>
+    <title>Ghost Team | Missions</title>
 </head>
 
 <body>
@@ -29,17 +29,18 @@
                 <ul class="main-nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="missions.html" aria-current="page">Missions</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!--End header-->
+    <main>
     <!--Start Content Section-->
     <!--section tag below works as a container to put the video and div mission-text inside it -->
     <section class="missions-content">
-        <video autoplay muted loop>
+        <video autoplay muted loop playsinline aria-label="Call of Duty latest version gameplay video">
             <source src="assets/videos/call-of-duty-mission-video.mp4" type="video/mp4">
             Your browser does not support the video tag
         </video>
@@ -49,10 +50,11 @@
             <h2>our main mission</h2>
             <p>Gather many MVPs in our Ghost Team to join the Call Of Duty World Championship 2023/2024 and win the Tournament
                 to get the first prize "100.000$"</p>
-            <button onclick="alert('Thank You for Your Interaction!')">See More</button>
+            <button type="button" onclick="alert('Thank You for Your Interaction!')">See More</button>
         </div>
     </section>
     <!--End Content Section-->
+    </main>
     <!-- Start Footer-->
     <footer>
         <!--Div container inside footer tag "that will contain all footer elements"-->
