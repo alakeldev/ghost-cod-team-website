@@ -155,7 +155,8 @@ header .main-nav li a {
 /* Targets a elemtns inside (header --> ul --> li) */
 /* here when we hover the cursor above the tag will change the color and give background different from the main status */
 header .main-nav li a:hover,
-header .main-nav li a:focus {
+header .main-nav li a:focus,
+header .main-nav li a[aria-current="page"] {
     color: var(--main-color);
     background-color: rgb(250, 250, 250);
 }
@@ -174,7 +175,8 @@ header .main-nav li a::before {
 
 /* Change status (before P-element) from left = -100 to left = 0 when we hover or focus the cursor above the a element */
 header .main-nav li a:hover::before,
-header .main-nav li a:focus::before {
+header .main-nav li a:focus::before,
+header .main-nav li a[aria-current="page"]::before {
     left: 0;
 }
 
@@ -192,7 +194,8 @@ header .main-nav li a::after {
 
 /* Change status (after P-element) from right = -100 to right = 0 when we hover or focus the cursor above the a element */
 header .main-nav li a:hover::after,
-header .main-nav li a:focus::after {
+header .main-nav li a:focus::after,
+header .main-nav li a[aria-current="page"]::after {
     right: 0;
 }
 
