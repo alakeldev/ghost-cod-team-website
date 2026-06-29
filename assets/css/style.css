@@ -154,7 +154,8 @@ header .main-nav li a {
 
 /* Targets a elemtns inside (header --> ul --> li) */
 /* here when we hover the cursor above the tag will change the color and give background different from the main status */
-header .main-nav li a:hover {
+header .main-nav li a:hover,
+header .main-nav li a:focus {
     color: var(--main-color);
     background-color: rgb(250, 250, 250);
 }
@@ -171,10 +172,10 @@ header .main-nav li a::before {
     transition: var(--main-transition);
 }
 
-/* Change status (before P-element) from left = -100 to left = 0 when we hover the cursor above the a element */
-header .main-nav li a:hover::before {
+/* Change status (before P-element) from left = -100 to left = 0 when we hover or focus the cursor above the a element */
+header .main-nav li a:hover::before,
+header .main-nav li a:focus::before {
     left: 0;
-    transition: var(--main-transition);
 }
 
 /* Initiate pesudo element (after) that make decoration line under the a element */
@@ -189,10 +190,10 @@ header .main-nav li a::after {
     transition: var(--main-transition);
 }
 
-/* Change status (after P-element) from right = -100 to right = 0 when we hover the cursor above the a element */
-header .main-nav li a:hover::after {
+/* Change status (after P-element) from right = -100 to right = 0 when we hover or focus the cursor above the a element */
+header .main-nav li a:hover::after,
+header .main-nav li a:focus::after {
     right: 0;
-    transition: var(--main-transition);
 }
 
 /* End Header */
@@ -450,6 +451,10 @@ also the div contain main header and main paragraph also target the paragraph an
 
 /* Start animation to the arrow icon to make it move when we hover over the event */
 @keyframes mv-arrow {
+    0% {
+        transform: translateX(0);
+    }
+
     100% {
         transform: translateX(10px);
     }
@@ -530,7 +535,7 @@ footer .container .social-icons li a {
     position: relative;
     border-radius: 10px;
     text-transform: uppercase;
-    /* Call previous Animation under name color-image related to Events-section (Upcoming-Events title) */
+    /* Call previous animation under name color-change (defined in Events section) */
     animation: color-change 2s linear infinite;
 }
 
@@ -687,7 +692,7 @@ footer .container .social-icons li a {
     position: relative;
     border-radius: 10px;
     text-transform: uppercase;
-    /* Call previous Animation under name color-image related to Events-section (Upcoming-Events title) */
+    /* Call previous animation under name color-change (defined in Events section) */
     animation: color-change 2s linear infinite;
 }
 
@@ -743,6 +748,7 @@ footer .container .social-icons li a {
 /* Targets the textarea elements with class .cont-input inside form */
 .contact-content .container form textarea.cont-input {
     height: 180px;
+    resize: vertical;
 }
 
 /* Targets only the input with type submit inside the form */
